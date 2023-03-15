@@ -1,0 +1,33 @@
+.loader_container, .error_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 200px);
+}
+.main {
+  padding: 25px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+}
+.main h1 {
+  font-size: 48px;
+}
+.main .subtitle {
+  margin-top: 10px;
+  color: gray;
+}
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 470px) {
+  .main h1 {
+    font-size: 40px;
+  }
+  .main .subtitle {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,75 @@
+.main {
+  padding: 0 15px;
+  display: flex;
+  margin-bottom: 20px;
+}
+.main::before {
+  content: "\2022";
+  color: var(--vivid-text-color);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+.main_ar::before {
+  margin-right: -1em;
+  margin-left: 0;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.examples {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.examples .example {
+  color: gray;
+}
+.phrases_list {
+  list-style: none;
+  /* background-color: darkblue; */
+}
+.inner_content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.phrases_list_item {
+  padding: 0 15px;
+  display: flex;
+  margin-top: 10px;
+}
+.phrases_list_item::before {
+  content: "\2022";
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+.phrases_list_item_ar::before {
+  margin-right: -1em;
+  margin-left: 0;
+}
+.phrases_title {
+  margin-bottom: 10px;
+  color: var(--vivid-text-color);
+}
+.non_list {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.non_list p {
+  color: var(--vivid-text-color);
+  margin-right: 15px;
+}
+.non_list_title {
+  color: var(--color-primary) !important;
+}
+.synonyms, .antonyms {
+  display: flex;
+}

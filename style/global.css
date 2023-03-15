@@ -1,0 +1,201 @@
+@font-face {
+  font-family: 'Roboto Mono';
+  src: url(../fonts/Roboto_Mono/RobotoMono-Bold.ttf);
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  src: url(../fonts/Roboto_Mono/RobotoMono-SemiBold.ttf);
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  src: url(../fonts/Roboto_Mono/RobotoMono-Medium.ttf);
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  src: url(../fonts/Roboto_Mono/RobotoMono-Regular.ttf);
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  src: url(../fonts/Roboto_Mono/RobotoMono-Light.ttf);
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Almarai';
+  src: url(../fonts/Almarai/Almarai-Bold.ttf);
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Almarai';
+  src: url(../fonts/Almarai/Almarai-Regular.ttf);
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Almarai';
+  src: url(../fonts/Almarai/Almarai-Light.ttf);
+  font-weight: 300;
+  font-display: swap;
+}
+
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/play-pause.css');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/play-button.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Mono', 'Almarai', sans-serif;
+}
+:root {
+  --body-width: 900px;
+  --body-padding: 25px;
+  --background-primary: #e8e8e8;
+  --color-primary: #050505;
+  --switcher-background: #10133a;
+  --switcher-icon-color: #fff000;
+  --sperator-color: darkgray;
+  --vivid-text-color: #1b96f3;
+  --play-button-bg: #fff000;
+}
+[data-dark-theme='true'] {
+  --background-primary: #050505;
+  --color-primary: white;
+  --switcher-background: #1b96f3;
+  --sperator-color: gray;
+  --vivid-text-color: #fff000;
+  --play-button-bg: #1b96f3;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  color: var(--color-primary);
+  background-color: var(--background-primary);
+  transition: background-color .2s;
+  max-width: var(--body-width);
+  margin: 0 auto;
+  padding: var(--body-padding);
+  padding-bottom: 40px;
+  min-height: 100vh;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+/* -------------------- navbar -------------------- */ 
+.nav {
+  width: 100%;
+}
+.nav .top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.book-icon-container {
+  flex: 1;
+  padding-top: 8px;
+}
+.book-icon-container img {
+  height: 50px;
+  width: auto;
+}
+.top-nav select {
+  width: 120px;
+  margin-right: 20px;
+  height: 35px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 0 5px;
+  font-weight: 500;
+  background-color: white;
+}
+/* ----- theme switcher - credits: https://uiverse.io/alexruix/splendid-liger-23 ----- */ 
+
+/* The switch - the box around the slider */
+.switch {
+  font-size: 14px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--switcher-background);
+  transition: .5s;
+  border-radius: 30px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 50%;
+  left: 10%;
+  bottom: 15%;
+  box-shadow: inset 8px -4px 0px 0px var(--switcher-icon-color);
+  background: var(--switcher-background);
+  transition: .5s;
+}
+input:checked + .slider:before {
+  transform: translateX(100%);
+  box-shadow: inset 15px -4px 0px 15px var(--switcher-icon-color);
+}
+/* ---------- search box ---------- */ 
+.input-container form {
+  border: none;
+  padding: 0;
+  width: 100%;
+  margin-top: 25px;
+}
+.input-container form input {
+  width: 100%;
+  height: 45px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 0 15px 0 45px;
+  background: white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 16px center;
+}
+/* ---------- results ---------- */ 
+hr {
+  margin-top: -10px;
+  outline: none;
+  border: none;
+  height: 1px;
+  background-color: var(--sperator-color);
+}
+
+@media only screen and (max-width: 470px) {
+  body {
+    padding: 25px 15px;
+  }
+  .input-container form input {
+    font-size: 14px;
+    padding: 0 5px 0 28px;
+    background: white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 8px center;
+  }
+}

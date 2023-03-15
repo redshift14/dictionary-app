@@ -1,0 +1,32 @@
+{
+  "name": "dictionary-app",
+  "version": "1.0.0",
+  "description": "arabic & english dictionary app with voice",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "keywords": [
+    "dictionary",
+    "languages",
+    "text-to-speech",
+    "arabic-dictionary",
+    "english-dictionary"
+  ],
+  "author": "Anas Arif",
+  "license": "ISC",
+  "dependencies": {
+    "@next/bundle-analyzer": "^13.2.4",
+    "@vercel/analytics": "^0.1.11",
+    "next": "^13.2.4",
+    "react": "^18.2.0",
+    "sharp": "^0.31.3"
+  },
+  "devDependencies": {
+    "eslint": "8.36.0",
+    "eslint-config-next": "13.2.4"
+  }
+}

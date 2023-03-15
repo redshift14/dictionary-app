@@ -1,0 +1,50 @@
+.main {
+  /* background-color: darkcyan; */
+  margin: 20px 0;
+}
+.pos {
+  font-style: italic;
+  margin-bottom: 20px;
+  position: relative;
+  width: max-content;
+  font-size: 16px;
+  font-weight: 600;
+}
+.pos::after {
+  --margin: 10px;
+  content: '';
+  position: absolute;
+  width: calc(var(--body-width) - (var(--body-padding)*2) - var(--margin) - 100%);
+  height: 1px;
+  background-color: var(--sperator-color);
+  top: 50%;
+  left: calc(100% + var(--margin));
+}
+.pos_ar::after {
+  right: calc(100% + var(--margin));
+}
+.text_pronunciation {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.text {
+  font-weight: 700;
+}
+.pronunciation {
+  color: var(--vivid-text-color);
+}
+.inflections {
+  display: flex;
+  gap: 10px;
+}
+.inflections .title, .senses_title {
+  color: gray;
+}
+.senses_title {
+  margin-top: 10px;
+}
+.senses_list {
+  margin-top: 10px;
+  list-style: none;
+}
